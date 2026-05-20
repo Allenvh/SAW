@@ -1,12 +1,6 @@
 {
-  "DefaultMappingMode": "SameUsername",
-  "SourceDomain": "OURLOTTO",
-  "TargetRealm": "AD.LOTGITS.COM",
-  "TargetNetbiosDomain": "LOTGITS",
-  "ExplicitMappings": [
-    {
-      "SourceUser": "OURLOTTO\\jdoe",
-      "TargetUserPrincipalName": "jdoe@AD.LOTGITS.COM"
-    }
-  ]
+  "sameUsernameMode": true,
+  "explicitMappings": {
+    "SOURCE\\jdoe": "jdoe@TARGET.LOCAL"
+  }
 }

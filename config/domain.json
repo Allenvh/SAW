@@ -1,0 +1,7 @@
+{
+  "sourceDomain": "source.local",
+  "targetDomain": "target.local",
+  "targetUpnSuffix": "TARGET.LOCAL",
+  "supportedControls": ["downloads","printing","extensions","devtools","sync","kiosk","profiles"],
+  "unsupportedControls": ["clipboard host-level hard enforcement","dragdrop host-level hard enforcement"]
+}
