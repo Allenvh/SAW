@@ -1,0 +1,66 @@
+{
+  "GlobalDefaults": {
+    "AllowFileUpload": false,
+    "AllowFileDownload": false,
+    "AllowPrinting": false,
+    "AllowClipboardIntoSession": true,
+    "AllowClipboardOutOfSession": false,
+    "AllowDragDrop": false,
+    "AllowDevTools": false,
+    "AllowBrowserExtensions": false,
+    "AllowWebcam": false,
+    "AllowMicrophone": false,
+    "AllowAudio": false,
+    "EnableWatermark": true,
+    "EnableKioskMode": true,
+    "EphemeralProfile": true,
+    "PersistentProfile": false,
+    "RecordSessionMetadata": true,
+    "RecordSessionVideo": false,
+    "AllowScreenshots": false,
+    "BlockDownloadsAtBrowser": true,
+    "RedirectDownloadsToStaging": false,
+    "DownloadStagingPath": "",
+    "UploadStagingPath": "",
+    "SessionTimeoutMinutes": 30
+  },
+  "GroupPolicies": [
+    {
+      "Group": "OURLOTTO\\APP_Admins",
+      "AllowDevTools": true,
+      "PersistentProfile": true,
+      "EnableKioskMode": false
+    },
+    {
+      "Group": "OURLOTTO\\APP_FileUpload_Allowed",
+      "AllowFileUpload": true,
+      "UploadStagingPath": "C:\\RemoteBrowserKerberosGateway\\Staging\\Uploads"
+    },
+    {
+      "Group": "OURLOTTO\\APP_FileDownload_Allowed",
+      "AllowFileDownload": true,
+      "BlockDownloadsAtBrowser": false,
+      "RedirectDownloadsToStaging": true,
+      "DownloadStagingPath": "C:\\RemoteBrowserKerberosGateway\\Staging\\Downloads"
+    },
+    {
+      "Group": "OURLOTTO\\APP_Print_Allowed",
+      "AllowPrinting": true
+    },
+    {
+      "Group": "OURLOTTO\\APP_ClipboardOut_Allowed",
+      "AllowClipboardOutOfSession": true
+    }
+  ],
+  "AppPolicies": [
+    {
+      "AppId": "nextgms",
+      "RequiredGroups": [
+        "OURLOTTO\\APP_Users"
+      ],
+      "AllowedLotgitsRealm": "AD.LOTGITS.COM",
+      "RequireKerberos": true,
+      "AllowNtlmFallback": false
+    }
+  ]
+}

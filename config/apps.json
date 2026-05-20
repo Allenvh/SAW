@@ -1,0 +1,28 @@
+[
+  {
+    "Id": "nextgms",
+    "DisplayName": "NextGMS",
+    "Url": "https://nextgms.lalone.ad.lotgits.com",
+    "Browser": "chromium",
+    "RequiredGroups": [
+      "OURLOTTO\\APP_Users"
+    ],
+    "KioskMode": true,
+    "RequireKerberos": true,
+    "AllowNtlmFallback": false,
+    "AdditionalBrowserArgs": []
+  },
+  {
+    "Id": "passwordreset",
+    "DisplayName": "Password Reset",
+    "Url": "https://passwordreset.lalone.ad.lotgits.com",
+    "Browser": "chromium",
+    "RequiredGroups": [
+      "OURLOTTO\\APP_Users"
+    ],
+    "KioskMode": true,
+    "RequireKerberos": true,
+    "AllowNtlmFallback": false,
+    "AdditionalBrowserArgs": []
+  }
+]
