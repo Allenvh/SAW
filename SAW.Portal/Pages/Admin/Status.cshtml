@@ -1,0 +1,7 @@
+@page
+@model StatusModel
+<h1>Admin Status</h1>
+<p>Loaded Apps: @Model.AppCount</p>
+<p>Active Sessions: @Model.SessionCount</p>
+<p>Supported Controls: @string.Join(", ",Model.Domain.SupportedControls)</p>
+<p>Unsupported Controls: @string.Join(", ",Model.Domain.UnsupportedControls)</p>

@@ -1,0 +1,13 @@
+services:
+  portal:
+    image: mcr.microsoft.com/dotnet/aspnet:8.0
+    working_dir: /app
+    volumes: ["./SAW.Portal:/app","./config:/config"]
+    command: ["dotnet","run","--urls","http://0.0.0.0:8080"]
+    ports: ["8080:8080"]
+  browser:
+    build: ./docker/browser-image
+    environment:
+      SESSION_ID: sandbox
+      TARGET_URL: https://app1.target.local
+    ports: ["127.0.0.1:6901:6901"]
